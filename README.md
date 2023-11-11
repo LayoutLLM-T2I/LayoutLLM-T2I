@@ -20,3 +20,24 @@ By filtering, scrutinizing, and sampling from captions of COCO 2014, we built a 
 | **Mixed**     | 188  | 6.94      | 10.76        | • one motorcycle rider riding going up the mountain, two going down.<br />• a group of three bathtubs sitting next to each other. |
 | **Null**      | 200  | 6.17      | 9.62         | • a kitchen scene complete with a dishwasher, sink, and an oven.<br />• a person with a hat and some ski poles. |
 | **Total**     | 943  | 6.35      | 10.18        | -                                                            |
+
+## Model
+
+Coming soon.
+
+
+
+
+
+## Reference
+
+```
+@inproceedings{qu2023layoutllm,
+  title={LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation},
+  author={Qu, Leigang and Wu, Shengqiong and Fei, Hao and Nie, Liqiang and Chua, Tat-Seng},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={643--654},
+  year={2023}
+}
+```
+
