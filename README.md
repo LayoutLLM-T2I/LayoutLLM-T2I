@@ -10,7 +10,7 @@ In the text-to-image generation field, recent remarkable progress in Stable Diff
 
 ## Dataset: COCO-NSS1K
 
-By filtering, scrutinizing, and sampling from captions of COCO 2014, we built a new benchmark called [COCO-NSS1K](/https://github.com/LayoutLLM-T2I/LayoutLLM-T2I/tree/main/data/) to evaluate the Numerical reasoning, Spatial and Semantic Relation understanding of text-to-image generative models. 
+By filtering, scrutinizing, and sampling from captions of COCO 2014, we built a new benchmark called [COCO-NSS1K](https://github.com/LayoutLLM-T2I/LayoutLLM-T2I/tree/main/data) to evaluate the Numerical reasoning, Spatial and Semantic Relation understanding of text-to-image generative models. 
 
 |               | #Num | #Avg.bbox | #Avg.Cap.Len | Caption Examples                                             |
 | ------------- | ---- | --------- | ------------ | ------------------------------------------------------------ |
