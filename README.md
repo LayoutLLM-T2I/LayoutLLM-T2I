@@ -21,13 +21,59 @@ By filtering, scrutinizing, and sampling from captions of COCO 2014, we built a 
 | **Null**      | 200  | 6.17      | 9.62         | • a kitchen scene complete with a dishwasher, sink, and an oven.<br />• a person with a hat and some ski poles. |
 | **Total**     | 943  | 6.35      | 10.18        | -                                                            |
 
-## Model
+## Getting Started
 
-Coming soon.
+### Installation
 
+**1. Download repo and create environment**
 
+```bash
+https://github.com/LayoutLLM-T2I/LayoutLLM-T2I.git
+conda create -n layoutllm_t2i python=3.8
+conda activate layoutllm_t2i
+pip install -r requirements.txt
+```
 
+**2. Download and prepare the pretrained weights**
 
+This model includes a policy model and a [GLIGEN](https://github.com/gligen/GLIGEN)-based relation-aware diffusion model. The policy weights can be downloaded [here](https://drive.google.com/file/d/1t7M-uqgB5GMATJGEe2sM7oZX_ex4EysE/view?usp=sharing) and saved in `POLICY_CKPT`. The diffusion model weights are downloaded [here](https://pan.baidu.com/s/1mHyEljbq45Komzp3Iduw8g?pwd=mzac) and saved in  `DIFFUSION_CKPT`. 
+
+### Text-to-Image Generation
+
+Download the [candidate example file](https://drive.google.com/file/d/14bZ7bOcLG5P9b6mu_StWOv4MyzBIqbfs/view?usp=sharing) in which each instance was randomly sampled from COCO2014, and save it in `CANDIDATE_PATH`.  Obtain `OPENAI_API_KEY` from the [openai platform](https://platform.openai.com/api-keys). 
+
+Run the generation code: 
+
+```bash
+export OPENAI_API_KEY=OPENAI_API_KEY
+
+python txt2img.py --folder generation_samples
+    --prompt PROMPT
+    --policy_ckpt_dir POLICY_CKPT
+    --diff_ckpt_path DIFFUSION_CKPT
+    --cand_path CANDIDATE_PATH
+    --num_per_prompt 1
+```
+
+`PROMPT` denotes your prompt. 
+
+### Training
+
+To train the the policy network, we first download images from COCO2014 and the [sampled training examples](https://drive.google.com/file/d/1pVEE9TeV1dpz43sxyek6N0m9C8poO46H/view?usp=sharing). Alternatively, one may sample some examples by himself. Besides, download the [weights](https://github.com/christophschuhmann/improved-aesthetic-predictor/blob/main/sac%2Blogos%2Bava1-l14-linearMSE.pth) of the aesthetic predictor pre-trained on the LAION dataset.  
+
+Run the training code: 
+
+```bash
+export OPENAI_API_KEY=OPENAI_API_KEY
+
+python -u train_rl.py
+    --gpu GPU_ID
+    --exp EXPERIMENT_NAME
+    --img_dir IMAGE_DIR
+    --sampled_data_dir DATA_PATH
+    --diff_ckpt_path DIFFUSION_CKPT 
+    --aesthetic_ckpt AESTHETIC_CKPT
+```
 
 ## Reference
 
@@ -40,4 +86,3 @@ Coming soon.
   year={2023}
 }
 ```
-
