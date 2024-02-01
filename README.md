@@ -49,7 +49,7 @@ export OPENAI_API_KEY=OPENAI_API_KEY
 
 python txt2img.py --folder generation_samples
     --prompt PROMPT
-    --policy_ckpt_dir ./ckpt/args.txt
+    --policy_ckpt_path POLICY_CKPT
     --diff_ckpt_path DIFFUSION_CKPT
     --cand_path CANDIDATE_PATH
     --num_per_prompt 1
