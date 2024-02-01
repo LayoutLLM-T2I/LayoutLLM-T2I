@@ -521,10 +521,11 @@ if __name__ == "__main__":
     parser.add_argument("--prompt", type=str, default='', help='text prompt')
     parser.add_argument('--cand_path', type=str, required=True, help='Path of candidate layout examples')
     parser.add_argument("--policy_ckpt_path", type=str, required=True, help='Path of Policy network weights')
+    parser.add_argument("--config_train_path", type=str, default='./configs/args.txt', help='Dir for args')
     parser.add_argument("--diff_ckpt_path", type=str, required=True, help='Path of GLIGEN-based relation-aware diffusion model')
     args = parser.parse_args()
     # combine args with args from the training phase
-    args_train = utils.load_json(os.path.join(args.policy_ckpt_dir, 'args.txt'))
+    args_train = utils.load_json(args.config_train_path)
     args = vars(args)
     args_train.update(args)
     args = argparse.Namespace(**args_train)
