@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 **2. Download and prepare the pretrained weights**
 
-This model includes a policy model and a [GLIGEN](https://github.com/gligen/GLIGEN)-based relation-aware diffusion model. The policy weights can be downloaded [here](https://drive.google.com/file/d/1t7M-uqgB5GMATJGEe2sM7oZX_ex4EysE/view?usp=sharing) and saved in `POLICY_CKPT`. The diffusion model weights are downloaded [here](https://pan.baidu.com/s/1mHyEljbq45Komzp3Iduw8g?pwd=mzac) and saved in  `DIFFUSION_CKPT`. 
+This model includes a policy model and a [GLIGEN](https://github.com/gligen/GLIGEN)-based relation-aware diffusion model. The policy weights can be downloaded [here](https://drive.google.com/file/d/1t7M-uqgB5GMATJGEe2sM7oZX_ex4EysE/view?usp=sharing)and saved in `POLICY_CKPT`. The diffusion model weights are downloaded [here (Baidu)](https://pan.baidu.com/s/1mHyEljbq45Komzp3Iduw8g?pwd=mzac) or [here (Huggingface)](https://huggingface.co/leigangqu/LayoutLLM-T2I/tree/main) and saved in  `DIFFUSION_CKPT`. 
 
 ### Text-to-Image Generation
 
