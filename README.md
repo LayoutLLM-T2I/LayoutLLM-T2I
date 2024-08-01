@@ -1,6 +1,6 @@
 # LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation
 
-PyTorch code of the ACM MM'23 paper "LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation". 
+PyTorch code of the ACM MM'23 paper [LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation](https://arxiv.org/pdf/2308.05095). 
 
 ## Introduction
 
